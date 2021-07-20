@@ -17,4 +17,3 @@ steps:
       command: 'build'
       Dockerfile: '**/Dockerfile'
       arguments: 'REDIS_VERSION=5.0.0'
-            docker build -t v:5.0.0 --build-arg REDIS_VERSION=5.0.0 .
