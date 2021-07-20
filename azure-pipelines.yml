@@ -21,9 +21,8 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - task: Docker@2
-      displayName: Build an image
+      displayName: building docker redis image
       inputs:
-        command: docker build -t v:5.0.0 --build-arg REDIS_VERSION=5.0.0 .
-        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: |
-          $(tag)
+        script: |
+          ls
+          docker build -t v:5.0.0 --build-arg REDIS_VERSION=5.0.0 .
